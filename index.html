@@ -367,9 +367,35 @@
         <p>Computer Engineer specializing in network architecture, systems security, and hardware-software integration. Driven by a passion for bridging low-level infrastructure with intelligent automation, analyzing network telemetry, and building secure, resilient digital systems to solve complex technical challenges.</p>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>02.  WORK EXPERIENCE</h2>
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+                <div>
+                    <h3>Consumer Technical Support Intern</h3>
+                    <p style="color:var(--primary-green); font-size: 0.9rem;">NOOR ADSL</p>
+                </div>
+                <span style="color:var(--text-muted); font-size: 0.85rem;">Technical Support Division</span>
+            </div>
+            <ul style="margin-top: 12px;">
+                <li>Diagnosed WAN/LAN connectivity issues, troubleshooting TCP/IP protocols, DNS configurations, and IP assignment faults for consumer broadband endpoints.</li>
+                <li>Analyzed physical-layer DSL telemetry (SNR margins, attenuation, line errors) to resolve signal degradation and packet loss.</li>
+                <li>Guided users through gateway router setups, NAT configurations, port forwarding, and local network adapter troubleshooting.</li>
+                <li>Logged and escalated unresolved network faults using ticketing workflows to ensure SLA compliance.</li>
+            </ul>
+            <div class="tag-row">
+                <span class="tag">Network Diagnostics</span>
+                <span class="tag">TCP/IP & DNS</span>
+                <span class="tag">Broadband Infrastructure</span>
+                <span class="tag">Customer Technical Support</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Technical Skills Section -->
     <section id="skills">
-        <h2>02.  TECHNICAL SKILLS</h2>
+        <h2>03.  TECHNICAL SKILLS</h2>
         <div class="grid">
             <div class="card">
                 <h3>Networking & Security</h3>
@@ -403,7 +429,7 @@
 
     <!-- Projects Section with Dynamic Category Filtering -->
     <section id="projects">
-        <h2>03.  FEATURED PROJECTS</h2>
+        <h2>04.  FEATURED PROJECTS</h2>
         
         <!-- Filter Buttons -->
         <div class="filter-container">
@@ -505,7 +531,7 @@
 
     <!-- Connect Section -->
     <section id="contact">
-        <h2>04.  CONNECT</h2>
+        <h2>05.  CONNECT</h2>
         <ul>
             <li>Email: <a href="mailto:omarmohamed999123@gmail.com">omarmohamed999123@gmail.com</a></li>
             <li>GitHub: <a href="https://github.com/b00091621" target="_blank">github.com/b00091621</a></li>
@@ -650,13 +676,16 @@
 
             switch(cmd) {
                 case "help":
-                    response.innerHTML = "Commands: <b style='color:var(--accent-cyan)'>about, skills, projects, ping, contact, clear</b>";
+                    response.innerHTML = "Commands: <b style='color:var(--accent-cyan)'>about, experience, skills, projects, ping, contact, clear</b>";
                     break;
                 case "ping":
                     response.innerHTML = "<span style='color:var(--primary-green)'>64 bytes from node.omar: icmp_seq=1 ttl=64 time=22.4 ms [SUCCESS]</span>";
                     break;
                 case "about":
                     response.innerText = "Omar: Computer Engineer focused on Network Architecture, Cyber Systems & Hardware Integration.";
+                    break;
+                case "experience":
+                    response.innerText = "NOOR ADSL | Consumer Technical Support Intern: Diagnosed WAN/LAN issues, DNS/IP routing, and DSL telemetry metrics.";
                     break;
                 case "skills":
                     response.innerText = "Networking (TCP/IP, OSPF, VLANs), Embedded C, Python, C++, SQL, Hardware Design.";
