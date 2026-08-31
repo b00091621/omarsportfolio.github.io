@@ -433,7 +433,7 @@
             <div class="card" data-category="embedded">
                 <div>
                     <h3>Automated BFRB Detection System</h3>
-                    <p>Senior Project: Cyber-physical health monitoring system using embedded sensor arrays and real-time biometric telemetry to trigger adaptive interventions.</p>
+                    <p>Senior Project: This project develops a non-intrusive, camera-based system that automatically detects and classifies body-focused repetitive behaviors such as nail biting and hair pulling from ordinary RGB video using pose landmark features and deep learning, enabling real-time behavioral awareness without wearable devices.</p>
                     <div class="tag-row">
                         <span class="tag">Embedded C</span>
                         <span class="tag">STM32</span>
@@ -478,6 +478,7 @@
                     <p>Hardware reaction timing system utilizing microcontroller hardware timers, external interrupts, and real-time state machine logic.</p>
                     <div class="tag-row">
                         <span class="tag">C/C++</span>
+                        <span class="tag">Java</span>
                         <span class="tag">Hardware Timers</span>
                         <span class="tag">Microcontrollers</span>
                     </div>
@@ -531,7 +532,7 @@
     <div class="modal-content">
         <span class="close-modal" onclick="closeModal('modal-bfrb')">&times;</span>
         <h3 style="color:var(--accent-cyan); margin-bottom:10px;">BFRB Detection Specs (Senior Project)</h3>
-        <p style="color:var(--text-main);">Integrates high-frequency sensor sampling with low-latency signal threshold detection on microcontrollers to provide visual and haptic feedback alerts instantly.</p>
+        <p style="color:var(--text-main);">This paper presents a privacy-conscious, camera-based framework for the automatic detection and classification of Body-Focused Repetitive Behaviors (BFRBs) — recurrent, self-directed actions such as nail biting, hair pulling, cuticle picking, and knuckle cracking that can lead to physical harm and emotional distress when left unmonitored. Unlike existing approaches that rely on wearable sensors or controlled clinical observation, the proposed system operates entirely from ordinary RGB video captured by four Logitech Brio 500 cameras positioned at front, left, right, and top viewpoints, recording 20 participants performing 24 distinct behavior classes — 11 BFRBs and 13 normal daily activities — nine times per camera view, yielding 720 sequences per class. Raw video frames are processed using MediaPipe Holistic to extract 75 skeletal landmarks per frame, from which a comprehensive 275-dimensional feature vector is computed per frame, combining raw 3D landmark coordinates with engineered distance and joint angle features specifically designed to capture hand-to-face proximity and repetitive motion patterns characteristic of BFRBs. Each video sequence is resampled to a fixed 25-frame window representing a 5-second observation period, producing input tensors of shape 25 × 275 that are passed to five deep learning architectures for temporal sequence classification: a stacked LSTM serving as the sequential baseline, a Temporal Convolutional Network (TCN) using dilated causal convolutions for efficient long-range pattern capture, a LightweightMV2 model employing depthwise separable 1D convolutions for computationally efficient inference, a Vanilla Transformer leveraging multi-head self-attention for global temporal reasoning, and a CNN-Transformer Hybrid that combines local convolutional feature extraction with global attention-based classification. All models are evaluated under a rigorous Leave-One-Subject-Out (LOSO) cross-validation protocol, ensuring that each model is tested exclusively on data from unseen participants, producing results that reflect real-world generalization rather than within-subject performance, with the ultimate goal of enabling timely, non-intrusive behavioral awareness on consumer-grade hardware without the need for wearable devices or cloud-based video processing..</p>
     </div>
 </div>
 
